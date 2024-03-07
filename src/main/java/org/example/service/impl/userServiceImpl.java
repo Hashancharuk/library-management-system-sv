@@ -1,9 +1,10 @@
-package org.example.service;
+package org.example.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.example.dto.User;
 import org.example.entity.userEntity;
 import org.example.repository.userRepository;
+import org.example.service.userService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class userServiceImpl implements userService{
+public class userServiceImpl implements userService {
     final userRepository repository;
     final ModelMapper mapper;
     public List<userEntity> getAllUsers(){
